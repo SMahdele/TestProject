@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SignUp</title>
+</head>
+<body>
+    <h3> sign Up </h3>
+    {% for message in messages %}
+        {{message}}
+    {% endfor%}
+
+    <form action="login" method="post">
+        {% csrf_token %}
+            {{user_form.as_p}}
+            {{ profile_form.as_p}}
+        <input type="submit" value="SignUp" />
+
+    </form>
+</body>
+</html>
